@@ -1,0 +1,19 @@
+.container {
+    background-color: orange;
+    display: flex; /*바로 밑에 자식에만 적용*/
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; 기본값 */
+    justify-content: center;
+}
+
+.container .item {
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    border: 2px solid tomato ;
+    display: flex;
+    justify-content: center;
+    /* align-items:flex-end; */
+    /* align-items:flex-start; 기본값 */
+    align-items:center;
+}

@@ -1,0 +1,31 @@
+header {
+    background-color: tomato;
+}
+
+.navi {
+    display: flex;
+    list-style: none;
+}
+
+.container {
+    display: flex;
+}
+
+section {
+    width: 70%;
+    background-color: lightgray;
+}
+
+section article {
+    background-color: yellowgreen;
+}
+
+aside {
+    width: 30%;
+    background-color: olivedrab;  
+}
+
+footer {
+    background-color: violet;
+}
+
