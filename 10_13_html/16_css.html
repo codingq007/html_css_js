@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS2</title>
+    <style>
+        /* 가상 클래스 선택자 콜론을 사용(:) */
+        a:hover {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .box{
+            width:100px;
+            height:100px;
+            background: royalblue;
+            transition: 0.4s;
+        }
+
+        /* .box:hover {
+            width: 200px;
+            height: 200px;
+        } */
+
+        /* 클릭하는 동안에만 동작 */
+        .box:active {
+            width: 200px;
+            background: yellowgreen;
+        }
+
+        input {
+            width: 100px;
+            outline: none;
+            border: 1px solid lightgray;
+            padding: 5px 10px;
+            transition: 0.4s;
+        }
+
+        input:focus {
+            border-color: red;
+            width: 200px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <a href="http://google.com">Google</a>
+    <div class="box"></div>
+    <input type="text">
+</body>
+</html>

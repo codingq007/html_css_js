@@ -1,0 +1,46 @@
+header {
+    background-color: tomato;
+    height: 60px;            
+}
+
+.navi {
+    display: flex;            
+    list-style: none;
+}
+
+.navi > li {
+    width:100px;
+    /* margin-right: 20px; */
+    height:60px;
+    display: flex;
+    /* border:1px solid black; */
+    align-items: center;
+    /* margin-right: 20px; */
+}
+
+.container {
+    display: flex;
+}
+
+.container > section {
+    background-color: lightgray;
+    width: 70%;
+}
+
+.container > section > article {
+    background-color: yellowgreen;
+}
+
+.container > aside {    
+    background-color:dodgerblue;
+    width: 30%;
+}
+
+footer {
+    background-color: green;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS1</title>
+    <!-- 내장(Embedded)방식 -->
+    <style>
+        div{
+            color:green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        * {
+            color: blue;
+        }
+
+        /* 클래스 선택자 */
+        .orange {
+            color: blueviolet;
+        }
+
+        /* id 선택자 */
+        #orange {
+            color:burlywood;
+        }
+
+        /* 복합 선택자 */
+        span.orange {
+            font-size: 30px;
+            color:darkolivegreen;
+        }
+
+        /* 자식 선택자 */
+        ul > .orange {
+            font-size: 50px;
+        }
+
+        /* 후손 선택자 */
+        div .orange {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<!-- 
+    CSS 개요
+
+    선택자(Selector) {
+        속성:속성값;  
+        속성:속성값
+    }
+
+
+ -->
+<!-- <div style="color:red;"> 인라인 방식 -->
+<div style="color:red;">
+    Hello World!!!
+</div>
+
+<div>
+    <ul>
+        <li>딸기</li>
+        <li>사과</li>
+        <li id="orange" class="orange">오렌지</li>
+    </ul>
+</div>
+<div>엘지</div>
+<p>토마토</p>
+<span class="orange">오렌지</span>
+
+ 
+</body>
+</html>

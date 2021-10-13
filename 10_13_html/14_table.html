@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>테이블</title>
+    <style>
+        table{
+            /* border:1px solid blue; */
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid blue;
+            padding: 10px;
+        }
+        
+        th {
+            border:1px solid blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- table(표)
+    <table>
+        <tr>: Table row
+            <th> : Table Header(머리글 )
+            <td> : Table Data
+    -->
+
+    <table>
+        <tr>
+            <th>타입</th>
+            <th>값</th>
+        </tr>
+        <tr>
+            <td>문자</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>숫자</td>
+            <td>100</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <tr><th rowspan="2">데이터</th>
+            <!-- <th>타입</th> -->
+            <td colspan="2">문자/숫자</td>
+            <!-- <td>숫자</td> -->
+        </tr>
+        <tr>
+            <!-- <th>값</th> -->
+            <td>A</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>데이터 타입과 값</caption>
+        <colgroup>
+            <col>
+            <col style="background-color: tomato;">
+            <col style="background-color: yellowgreen;">
+        </colgroup>
+        <tr>
+            <th></th>
+            <th>타입</th>
+            <th>값</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>문자</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>숫자</td>
+            <td>7</td>
+        </tr>
+    </table>
+
+    <table>
+        <caption>회원목록</caption>
+        <colgroup>
+            <col style="background-color: yellowgreen;" span = "2">
+            <col style="background-color: tomato;" >            
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Addr</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>test</td>
+                <td>강호동</td>
+                <td>서울</td>
+            </tr>
+            <tr>
+                <td>test1</td>
+                <td>이경규</td>
+                <td>대전</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+
+
+
+</body>
+</html>
