@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        /* 가상 요소 선택자(Pseudo-Elements Selcetors) 
+             두개의 콜론(::)을 사용한다.
+        */
+        ul {
+            font-size: 40px;
+            list-style: none;
+        }
+
+        /* ul li::before{
+            content: "safd ";  
+            font-weight: bold;          
+            color:tomato;
+            margin-right: 20px;
+        } */
+
+        /* after, before */
+        ul li::before{
+            content: "";  
+            width: 20px;
+            height: 20px;
+            background: royalblue;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        ul li::after{
+            content: url("https://s.pstatic.net/static/newsstand/up/2020/0610/nsd151458769.png");
+            margin-left: 20px;
+        }
+
+        .border {
+            width:100px;
+            height:100px;
+            background: salmon;
+            border-radius: 20px;
+            /* border-top-left-radius: 20px; 
+            border-top-right-radius: 20px;  */
+        }
+        div.Pseudo {
+            font-size: 100px;
+        }
+        div.Pseudo::before{
+            content:"<"
+        }
+        div.Pseudo::after{
+            content:">"
+        }         
+    </style>
+</head>
+<body>    
+    <div class="border"></div>
+    <div class="Pseudo">DIV</div>
+
+    <!-- ul>li{$}*10 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+
+</body>
+</html>

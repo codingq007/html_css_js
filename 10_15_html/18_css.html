@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS</title>
+    <style>
+        /* .animal li:first-child{
+            color:blueviolet;
+            font-size: 20px;
+            font-weight: bold;
+            list-style: none;
+        }
+        .animal li:last-child{
+            color:blueviolet;
+            font-size: 20px;
+            font-weight: bold;
+            list-style: none;
+        } */
+
+        /* nth-child(n) */
+        .animal li:nth-child(3){
+        /* .animal .yellow:nth-child(1){ */
+            color:red;
+        }
+
+        /* nth-of-type(n) */
+
+        .animal li:nth-of-type(2){
+        /* .animal .yellow:nth-of-type(4){  */
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ul.animal>li*4 -->
+    <ul class="animal">
+        <li>사자</li>
+        <li class='yellow'>호랑이</li>
+        <li>악어</li>
+        <li class="yellow">표범</li>
+    </ul>
+
+</body>
+</html>
