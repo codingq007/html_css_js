@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS</title>
+    <style>
+        body {
+            height: 4000px;
+        }
+
+        .box {
+            width: 120px;
+            height: 80px;
+            background: yellowgreen;
+            border: 4px dashed red;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        .grand-parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed lightgray;
+            padding: 30px 100px 100px 30px;
+        }
+
+        .parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed gray;            
+        }       
+
+        .fixed {
+            position: fixed;
+            top:300px;
+            right:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grand-parent">
+        <div class="parent">
+            <div class="box">1</div>
+            <div class="box fixed">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>
+</body>
+</html>

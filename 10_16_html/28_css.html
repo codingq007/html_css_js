@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS</title>
+    <style>
+        div {
+            width:200px;
+            height:200px;
+            background: tomato;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>Toggle</button>
+    <div>div요소</div>
+
+    <script>
+        const elem = document.querySelector('div');
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', function(){
+            if(elem.classList.contains('hide')){
+                elem.classList.remove('hide')
+            } else {
+                elem.classList.add('hide')
+            }
+        });
+    </script>
+</body>
+</html>

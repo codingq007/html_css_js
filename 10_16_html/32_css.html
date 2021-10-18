@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS</title>
+    <style>
+        /* .box {
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+            border: 4px dashed red;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        } 
+        .relative{
+            position: relative;
+            top: 20px;
+            left: 150px;
+        }*/
+
+        /* 
+            absolute는 부모를 정할 때 html구조상의 부모가 아니라
+            position 위치상의 부모를 기준으로 정한다.
+
+            위치상의 부모(position:xxx )가 없으면 뷰포트가 부모가된다.        
+        */
+        .box {
+            width: 120px;
+            height: 80px;
+            background: yellowgreen;
+            border: 4px dashed red;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        .grand-parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed lightgray;
+            padding: 30px 100px 100px 30px;
+            position: relative;
+        }
+
+        .parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed gray;
+            
+        }
+
+        .absolute {
+            position:absolute;
+            /* top:50px;
+            left:100px; */
+            bottom:0px;
+            right:10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="box">1</div>
+    <div class="box relative">2</div>
+    <div class="box">3</div> -->
+
+    <!-- .box{$}*3 -->
+    <div class="grand-parent">
+        <div class="parent">
+            <div class="box">1</div>
+            <div class="box absolute">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>
+</body>
+</html>
