@@ -1,0 +1,234 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    /* background-color: #040d22; */
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header .container .nav {
+    flex-grow: 1;
+}
+
+header .forms {
+    display: flex;
+}
+
+header .forms input.form-control {
+    color: white;
+    background-color: rgba(255, 255, 255, .2);
+    border-color: rgba(255, 255, 255, .4);
+}
+
+header .forms input.form-control::placeholder{
+    color:rgba(255, 255, 255, .8)
+}
+
+header .forms .btn-link {    
+    color:aliceblue;
+    text-decoration: none;
+}
+
+header .nav .nav-item .nav-link {
+    color:aliceblue;
+}
+
+header .forms .btn {
+    flex-shrink: 0;
+}
+
+section.hero{
+    background-color: #040d22;
+    position:relative;
+    overflow: hidden;
+}
+
+section.hero img.globe{
+    width: 900px;
+    position:absolute;
+    top: -5%;
+    left: 46%;
+}
+
+section.hero img.glow{
+    width: 200%;
+    height: 200%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+section.hero > .container{
+    padding-top:160px;
+    padding-bottom: 160px;
+    position: relative;
+}
+
+section.hero .headline h1{
+    color:white;
+    font-size: 68px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+section.hero .headline p{
+    color: rgba(255, 255, 255, .5);
+    font-size: 26px;
+}
+
+section.hero .curve{
+    position:absolute;
+    bottom:-1px;
+    left:0;
+}
+
+section.youtube{
+    
+}
+
+section.youtube .container{
+    padding-top: 90px;
+    padding-bottom: 70px;
+    position: relative;
+}
+
+section.youtube img.astronaut {
+    width:480px;
+    position:absolute;
+    top:-420px;
+    right:0;
+}
+
+section.youtube .ratio{
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section.features {
+    
+}
+
+section.features .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+section.features .card{
+    color: #627597;
+    border:none;
+}
+
+section.features .card img {
+    padding: 30px 60px;
+}
+
+section.map{
+
+}
+
+
+section.map .container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #627597;
+}
+
+section.map h1{
+    font-size: 44px;
+    font-weight: 700;
+}
+
+section.map p{
+    font-size: 24px;
+}
+
+#map {
+    height: 500px;
+    border: 1px solid rgba(0,0,0, .2);
+    border-radius: 10px; 
+    z-index: 1;   
+}
+
+#map.shadow{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+footer {
+    background-color: #040d22;
+    margin-top: 18%;
+    position:relative;
+}
+
+footer .curve {
+    transform: scale(1, -1);
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+/* transform을 주면 z-index가 0이 된다.
+ (stacking context안에 들어간다.) 따라서,
+ 일반 elements보다 위로 올라간다.
+map위에 이미지가 겹치면 map의 
+z-index를 1로 설정해준다.*/
+footer img.illustration {
+    width:100%;
+    margin-top: -40%;
+    transform: scale(-1, 1)
+}
+
+
+footer img.logo{
+    opacity: .5;
+}
+
+footer h5 {
+    font-weight: 700;
+    color: rgba(255, 255, 255, .4);
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color:rgba(255, 255, 255, .4);
+    text-decoration: none;
+    transition: .3s;
+}
+
+footer ul li a:hover{
+    color:white;
+}
+
+footer .site-links {
+    margin:0; /* Bootstrap을 통해 적용된 여백 초기화*/
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .15);
+}
+
+footer .site-links li {
+    color: rgba(255, 255, 255, .4);
+    margin: 0; /* footer ul li 위에서 설정한 여백을 초기화*/
+    margin-right: 20px;
+}
+
+/* 마지막 오른쪽 여백 없애기 */
+footer .site-links li:last-child {
+    margin-right: 0;
+}
+
