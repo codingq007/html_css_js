@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+        const db_id = 'test';
+        const db_pw = 'test1234';
+
+        // 방문자에게 아이디를 입력 받는다.
+        let user_id = prompt('아이디를 입력하세요!!!');
+        console.log(user_id);
+
+        // 방문자에게 비밀번호를 입력 받는다.
+        let user_pw = prompt('비밀번호를 입력하세요!!!');
+
+        // 문제> 아이디와 비밀번호 일치시 "test님 반갑습니다"를...문서 출력
+        // 아이디 불일치할 경우에는 "아이디 불일치" 경고창 출력(alert함수 이용), 
+        // 아이디는 일치하고 비밀번호가 불일치
+        // 하는 경우에는 "비밀번호 불일치" 경고창 출력
+
+        if(db_id === user_id){
+            if(db_pw === user_pw){
+                document.write(user_id+'님 반갑습니다!!');
+            }else{
+                alert('비밀번호가 일치하지 않습니다!!');
+            }
+        }else{
+            alert('아이디가 일치하지 않습니다!!');
+            location.reload();
+        }
+    </script>
+</body>
+</html>

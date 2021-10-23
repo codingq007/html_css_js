@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    const n = 1;
+    // 기본 if문
+    if(n+1 === 2){
+        console.log("n+1은 2입니다.")
+    }
+
+    const i2 = 1; // 전역변수
+    if(true){
+        const i2 = 2; // 지역변수
+        console.log('if안의 i2값은 ' + i2);
+    }
+
+    console.log('if밖의 i2값은 '+i2);
+
+    //if ~ else문
+    const b = 10;
+    if(b > 20){
+        console.log('b가 20보다 크다.')
+    }else{
+        console.log('b가 20보다 작다.')
+    }
+
+    //if ~ else if : 여러 조건에 따라서 다른 작업을 할 때
+    const c = 77;
+    if(c ===55){
+        console.log('55도 입니다.')
+    }else if(c==66){
+        console.log('66도 입니다.')
+    }else{
+        console.log('온도 미측정!!')
+    }
+
+    // switch문 : 주어진 값에 따라서 작업을 하고자 할 때
+    const handphone = 'iphone';
+
+    switch(handphone){
+        case 'galaxy':
+            console.log('삼성');
+            break;
+        case 'iphone':
+            console.log('아이폰');
+            break;
+        case 'v6':
+            console.log('LG');
+            break;
+        default:
+            console.log('???');
+    }
+
+    var d = new Date();
+    var day =d.getDay();
+    console.log(day);
+
+
+
+    // 문제> switch문을 활용해서 현재 요일을 출력하는
+    //      코드를 작성하세요.
+
+    var dayName = "";
+    switch (day) {
+            case 0:
+                dayName = "일요일";
+                break;
+            case 1:
+                dayName = "월요일";
+                break;
+            case 2:
+                dayName = "화요일";
+                break;
+            case 3:
+                dayName = "수요일";
+                break;
+            case 4:
+                dayName = "목요일";
+                break;
+            case 5:
+                dayName = "금요일";
+                break;            
+            
+            default:
+                dayName = "토요일";            
+                break;
+        }
+    
+    console.log(dayName);
+
+
+        // let userId = prompt('당신의 아이디는?');
+
+        // if(userId){
+        //     document.write(userId+'님 안녕하세요!!');
+        // }
+
+        let result = confirm('회원 탈퇴 하시겠습니까?');
+        console.log('result : ' + result);
+
+        if(result){
+            document.write('탈퇴 완료');
+        }else{
+            document.write('탈퇴 취소');
+        }
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</script>
+</body>
+</html>
