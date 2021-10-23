@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+
+// 자바스크립트 버전의 가장 큰변화시점
+// EC5 -> EC6 
+
+    // var 선언자
+    var x = 5; 
+    var y = 10;
+    var z = x + y; 
+
+    console.log("x :", x);
+    console.log("y :", y);
+    console.log("z :", z);
+
+    var x = 7; // 재선언 가능
+    z = x + y;
+    console.log("z :", z);
+
+    // let
+    let x1 = 5;
+    let y1 = 10;
+    let z1 = x1 + y1;
+
+    // let x1 = 7; //재선언 불가능
+    x1 = 100; // 값 변경 가능
+
+    // const
+    const PI = 3.14;
+    // const PI = 22; // 재선언 불가
+    // PI = 22; // 값 변경 불가
+
+</script>
+</body>
+</html>

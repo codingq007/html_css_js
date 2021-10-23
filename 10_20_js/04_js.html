@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>데이터 타입</title>
+</head>
+<body>
+    <script>
+        // 문자열 String
+        let name = "kim";
+        let name2 = 'Lee';
+
+        let str1 = "He is called 'John'";
+        let str2 = "He is called \'John\'";
+        let str3 = 'He is called "John"';
+
+        console.log(str1);
+        console.log(str2);
+        console.log(str3);
+
+        // 숫자 Number
+        let x = 30; // 정수형
+        let y = 3.111; // 실수형
+
+        console.log(x);
+        console.log(y);
+
+        // undefined
+        let u;
+        let u2 = undefined;
+        console.log(u);
+        console.log('u2:' ,u2);
+
+        // null
+        let n = null;
+        console.log(n);
+
+        // 오브젝트
+        let person = {}; // 오브젝트 선언
+
+        // person.firstName = "길동";
+        // person.lastName = "홍";
+        // person.age = 33;
+        person["firstName"] = "흥민";
+        person["lastName"] = "손";
+        person["age"] = 33;
+
+        console.log(person.firstName);
+        console.log(person.lastName);
+
+        let person2 = {
+            firstName: "호동",
+            lastName: "강",
+            age: 44,
+            person1: person            
+        };
+
+        console.log(person2);
+
+        // Boolean 참/거짓 - true, false
+        let isAdult = true;
+
+        let x2 = 10;
+        let y2 = 20;
+        console.log(x2 > y2);
+
+        console.log(typeof x2);
+        console.log(typeof isAdult);
+        console.log(typeof name);
+        console.log(typeof person2);
+        
+        // 배열 - Array은 타입이 object
+        let arr1 = ["samsung", "lg", "hyundai"];
+        console.log(arr1[0]);
+        console.log(arr1[1]);
+        console.log(arr1[2]);
+
+        let arr2 = [3,5,6,2,12];
+        console.log(arr2[2]);
+        
+        let arr3 = ["samsung", 3, undefined];
+        
+        let arr4 = [person, person2];
+        
+        let arr5 = [];
+        
+        arr5.push(2);
+        arr5.push(3);
+        arr5.push(4);
+        arr5.push(5);
+        
+        console.log(arr5.length);
+        console.log(typeof arr1); // object
+
+        // 64비트 부동소수점
+        let xx = 0.1 + 0.2;
+        console.log(xx);
+
+        console.log(1/2);
+        console.log(2/3);
+
+        console.log((0.1).toString(2));
+        // 0.0001100110011001100110011001100110011001100110011001101
+
+        // 1비트 : 양수 0, 음수 1
+        // 11비트 : 지수부
+        // 52비트 : 가수부
+
+        console.log((0.1).toString(10));
+
+        // 수치계산시 필요한 라이브러리
+        // BigNumber.js
+        // Big.js
+        // Decimal.js
+
+        // 정수 15자리
+        let int2 = 999999999999999;
+                // 9007199254740991
+        let int3 = 9999999999999999;
+
+        console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+
+        console.log("int2 :", int2);
+               
+        console.log("int3 :", int3);
+
+        // 문자열 숫자를 정수로 변환
+        console.log(parseInt('444'));
+        console.log(parseInt('0.0001100110011001100110011001100110011001100110011001101'));
+    </script>
+    
+</body>
+</html>

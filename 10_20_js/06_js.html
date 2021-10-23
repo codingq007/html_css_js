@@ -1,0 +1,18 @@
+<script>
+    /*
+        [문제] 교통비, 음료비, 식사비를 입력받아 전체 비용을 구하고,
+               비용이 20,000원 초과시 초과비용 출력, 20,000원 미만이면
+               "OK"를 문서에 출력하시오.
+    */
+
+    let cost1 = prompt('교통비 입력');
+    let cost2 = prompt('음료비 입력');
+    let cost3 = prompt('식사비 입력');
+
+    let total = parseInt(cost1)+parseInt(cost2)+parseInt(cost3);
+
+    let res = total > 20000 ? total - 20000 + '원 초과':'OK';
+
+    document.write(res);
+
+</script>
