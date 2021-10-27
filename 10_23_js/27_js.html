@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // 가변 인자
+
+        // function sum(x1, x2){
+        //     var res = x1 + x2;
+        //     console.log(res);
+
+        //     return res;
+        // }
+        
+        // sum(5, 3);
+        
+        // function sum(x1, x2, x3, x4){
+        //     var res = x1 + x2 + x3 + x4;
+        //     console.log(res);
+
+        //     return res;
+        // }
+
+        // sum(1,2,3,4);
+
+        function sum(...args){ // args는 배열로 변환
+            var total = 0;
+            // for(var el of args){
+            //     total += el;
+            // }
+            args.forEach(function(el, idx){
+                console.log(idx);
+                total += el;
+            });
+            console.log(total);
+            return total;
+        }
+
+        sum(1,2,3,4,5,6);
+
+
+    </script>
+</body>
+</html>

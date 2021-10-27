@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    // 기본인자
+    // function say(msg) {
+    //     console.log(msg);
+    // }
+    
+    say();
+    // say("hi");    
+
+    // function say(msg) {
+    //     if(msg != undefined){
+    //         console.log(msg);
+    //     }else{
+    //         console.log("인자가 없네요....!!");
+    //     }
+    // }
+
+    function say(msg="인자가 없네요....!!"){
+        console.log(msg);
+    }
+
+    function plus(x, y=1){
+        console.log(x+y);
+    }
+    plus(4);
+    plus(4,3);
+    
+</script>
+</body>
+</html>

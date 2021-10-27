@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- DOM(Document Object Model) -->
+    <input type="text" id="text1" value="안녕하세요">
+<br>
+    <label for=""><input name = "chk_hobby" type="checkbox" value="music">음반</label>
+    <label for=""><input name = "chk_hobby" type="checkbox" value="book">도서</label>
+    <label for=""><input name = "chk_hobby" type="checkbox" value="shopping">쇼핑</label>
+    <label for=""><input name = "chk_hobby" type="checkbox" value="sports">스포츠</label>
+    <label for=""><input name = "chk_hobby" type="checkbox" value="movie">영화</label>
+<br>
+
+    <label for=""><input type="radio" name="rd_email_yn" value="Y" checked>동의</label>
+    <label for=""><input type="radio" name="rd_email_yn" value="N">거부</label>
+
+<br>
+    <select name="" id="select1">
+        <option value="KO">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+
+<br>    
+    <div id="div1"><h1>자바스크립트 study</h1></div>
+    <div id="div1"><h1>자바스크립트 study</h1></div>
+    <button type="button" onclick="doSave();">저장</button>
+
+    <script>
+
+        // getElementById()
+        // document.getElementById("text1").value = "Hello!!";
+
+        function doSave(){
+            // 입력된 데이터를 가져와서 서버에 전송하는 용도로 
+            // 사용될 수 있다.
+            var el = document.getElementById("text1");
+            console.log(el);
+
+            console.log(el.value); // 속성 접근 가능
+            var textValue = el.value;
+
+            console.log(textValue);
+
+            // querySelector()
+            // var el2 = document.querySelector("#text1");
+            // console.log(el2);
+
+            // getElmentsByName 복수개의 elements를 가져옴.
+            // var chkboxs = document.getElementsByName("chk_hobby");
+            // console.log(chkboxs);
+            // for(var i = 0; i<chkboxs.length; i++){
+            //     if(chkboxs[i].checked){
+            //         console.log(chkboxs[i].value);
+            //     }
+            // }
+
+            // querySelectorAll() : All은 배열로 리턴
+            var chkboxs2 = document.querySelectorAll("[name=chk_hobby]:checked");
+            console.log(chkboxs2);
+
+            var chkrd = document.querySelector("[name=rd_email_yn]:checked");
+            console.log(chkrd);
+
+            //select1 선택
+            var sel = document.getElementById("select1");
+            console.log(sel.value);
+
+            // getElementsByTagName() : 복수개 리턴
+            console.log(document.getElementsByTagName("div"));
+
+            // innerHTML, innerText
+            console.log(document.getElementById("div1").innerHTML);
+            console.log(document.getElementById("div1").innerText);
+        }
+    </script>
+</body>
+</html>

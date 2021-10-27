@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .border-red {
+            border:2px dashed red;
+        }
+
+        .border-green {
+            border:2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 스타일 제어 -->
+    <input type="text" id="text1" onblur="changeBorder();">
+    <br>
+
+    <br> 이메일 수신 :
+    <br>
+    <label for=""><input type="radio" name="rd_email_yn" value="Y" onclick="showEmail()">동의</label>
+    <label for=""><input type="radio" name="rd_email_yn" value="N" onclick="hideEmail()" checked>거부</label><br>
+    <div id="divEmail" style="display: none;">이메일<input type="text" id="email"></div>
+
+    
+    <br>
+    <select name="" id="select1" onchange="doChange(this)">
+        <option value=""></option>
+        <option value="KO">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+    <select name="" class="city" id="select2" style="display: none;">
+        <option value="">서울</option>
+        <option value="">대구</option>
+        <option value="">대전</option>
+        <option value="">부산</option>
+    </select>
+    <select name="" class="city" id="select3" style="display: none;">
+        <option value="">베이징</option>
+        <option value="">대구</option>
+        <option value="">대전</option>
+        <option value="">부산</option>
+    </select>
+    <select name="" class="city" id="select4" style="display: none;">
+        <option value="">도쿄</option>
+        <option value="">대구</option>
+        <option value="">대전</option>
+        <option value="">부산</option>
+    </select>
+    <br>
+    <br>
+    <button type="button" onclick="doSave()">저장</button>
+
+    <script>
+        function changeBorder(){
+            var text1 = document.getElementById("text1");
+            if(text1.value != ""){
+                text1.className = "border-green";
+            }
+        }
+
+        function showEmail() {
+            document.getElementById("divEmail").style.display = "";
+        }
+
+        function hideEmail() {
+            document.getElementById("divEmail").style.display = "none";
+        }
+
+        function cityNone(){
+            var citys = document.querySelectorAll(".city");
+                for(var city of citys){
+                    city.style.display="none";
+                }
+        }
+        function doChange(obj){
+            // if(obj.value == "KO"){
+            //     document.getElementById("select4").style.display="none";                
+            //     document.getElementById("select3").style.display="none";                
+            //     document.getElementById("select2").style.display="";
+            // }
+            // if(obj.value == "CN"){
+            //     document.getElementById("select4").style.display="none";                
+            //     document.getElementById("select2").style.display="none";                
+            //     document.getElementById("select3").style.display="";
+            // }
+            // if(obj.value == "JP"){
+                //     document.getElementById("select2").style.display="none"; 
+                //     document.getElementById("select3").style.display="none";                
+                //     document.getElementById("select4").style.display="";
+                // }                
+
+            var citys = document.querySelectorAll(".city");            
+
+            for(var city of citys){
+                city.style.display="none";
+                if(obj.value == "KO") {
+                    document.getElementById("select2").style.display="";
+                }else if(obj.value == "CN"){
+                    document.getElementById("select3").style.display="";
+                }else if(obj.value == "JP"){
+                    document.getElementById("select4").style.display="";
+                }
+            }                
+
+            // if(obj.value == "KO"){
+            //     cityNone();
+            //     document.getElementById("select2").style.display="";
+            // }
+            // if(obj.value == "CN"){
+            //     cityNone();
+            //     document.getElementById("select3").style.display="";
+            // }
+            // if(obj.value == "JP"){
+            //     cityNone();
+            //     document.getElementById("select4").style.display="";
+            // }
+        }
+
+        function doSave() {
+            var text1 = document.getElementById("text1");
+            if(text1.value == ""){
+                text1.className = "border-red";
+                return alert("반드시 입력하세요!!!");
+            }
+
+            console.log("doSave 실행...")
+        }
+
+    </script>
+</body>
+</html>

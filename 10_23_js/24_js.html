@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // window 객체
+        // window.alert("이것은 alert 창입니다.");
+
+        // window.prompt()
+        // window.confirm("정말 삭제하시겠습니까?");
+
+        // window.open("https://naver.com");
+
+        // window.print();
+
+        // setTimeout()
+        // setTimeout(function(){
+        //     console.log("5초후에 실행");
+        // }, 5000); // 5초후에 실행, 1초는 1000
+
+        // setInterval() // 주식 시세 정보를 보여주거나 할 때
+        // setInterval(function(){
+        //     console.log("3초마다 프로그램 실행");
+        // }, 3000);
+
+        // clearInterval(); // 종료
+        var i = 0;
+        var fnc = setInterval(function(){
+            console.log("3초마다 프로그램 실행 - " + i);
+            if(i == 3){
+                clearInterval(fnc);
+            }
+            i++;
+        }, 3000);
+
+
+
+
+    </script>
+
+</body>
+</html>

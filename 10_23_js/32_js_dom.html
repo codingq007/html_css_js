@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- <p onclick="change(this);">여기를 클릭</p>
+
+    <script>
+        function change(elem){
+            // elem.innerHTML = "내용 변경";
+            elem.innerText = "내용 변경";
+        }
+    </script> -->
+
+    <textarea name="" id="" cols="30" rows="10" onkeyup="doKeyup(this)"></textarea>
+    남은 글자: <span id="txtCnt">100</span>
+
+    <br>
+    <!-- placeholder 기능 -->
+    <input type="text" id="name" value="이름을 입력하세요">
+    
+
+    <script>
+        var n = document.getElementById("name");
+
+        n.addEventListener('focus', function(e){
+            if(n.value == "이름을 입력하세요"){
+                n.value = "";
+            }
+        });
+
+        n.addEventListener('blur', function(e){
+            if(n.value == ""){
+                n.value = "이름을 입력하세요";
+            }
+        });
+
+
+
+        function doKeyup(elem){
+            var len = elem.value.length;
+            var remain = 100 - len;
+            document.getElementById('txtCnt').innerHTML = remain;
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>

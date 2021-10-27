@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // JSON(JavaScript Object Notation)
+        // 서버에서 클라이언트로 데이터를 데이터를 전송할 때 아주 많이 사용
+        // 클라이언트에서 서버로 데이터를 전송할 때 역시 json형태(포맷)
+
+        var data = {
+            "employees":[
+                {"firstName":"kim", "lastName":"hm"},
+                {"firstName":"kim", "lastName":"hm"},
+                {"firstName":"kim", "lastName":"hm"},
+                {"firstName":"kim", "lastName":"hm"},
+                {"firstName":"kim", "lastName":"hm"},
+                {"firstName":"kim", "lastName":"hm"},
+                {"firstName":"kim", "lastName":"hm"},
+            ]
+        };
+
+        // JSON.stringify() : 데이터 통신시 object를 문자열로 변환할 때 사용
+        console.log(data);
+
+        console.log(JSON.stringify(data)); // object가 아니다.
+        // 서버에 전송을 할 경우 객체를 json 포맷의 문자열로 전송을 하고,
+        // 서버에서는 다시 object로 변환하여 사용한다.
+
+
+        var text ='{"employees":[{"firstName":"kim","lastName":"hm"},{"firstName":"kim","lastName":"hm"},{"firstName":"kim","lastName":"hm"},{"firstName":"kim","lastName":"hm"},{"firstName":"kim","lastName":"hm"},{"firstName":"kim","lastName":"hm"},{"firstName":"kim","lastName":"hm"}]}'
+
+
+        // JSON.parse : 문자열을 다시 object로 변환
+        var obj = JSON.parse(text);
+        console.log(obj);
+
+
+
+    </script>
+
+
+</body>
+</html>

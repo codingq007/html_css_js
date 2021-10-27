@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- 이벤트 -->
+    <input type="text" id="text1" onfocus="doFocus();" onblur="doBlur(this);">
+
+    <br>
+    <select name="" id="select1" onchange="doChange();">
+        <option value="KO">Korea</option>
+        <option value="CN">China</option>
+        <option value="JP">Japan</option>
+    </select>
+    <br>
+    <input type="text" id = "text2" onkeydown="doKeydown(event);">
+    <button type="button" onclick="doSearch();">조회</button>
+
+    <button onclick="doSave();">저장</button>
+    
+    <script>
+        function doFocus(){
+            console.log("doFocus");
+        }
+
+        function doBlur(obj){
+            if(obj.value == ""){
+                alert("반드시 입력해야 합니다...");
+            }
+            console.log(obj.value);
+        }
+
+        function doChange(){
+            var selValue = document.getElementById("select1").value;
+            console.log(selValue);
+        }
+
+        function doSearch(){
+            console.log("조회를 시작합니다!!!");
+        }
+
+        function doKeydown(event){
+            console.log(event);
+            if(event.keyCode == 13){ // Enter키의 keyCode는 13
+                doSearch();
+            }
+        }
+
+        function doSave(){
+            console.log("doSave");
+        }
+    </script>
+</body>
+</html>

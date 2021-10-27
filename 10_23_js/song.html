@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title></title>
+    <style>
+        /* table {
+            margin-top: 20px;
+            width: 1000px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e7e7e7;
+        }
+
+        th {
+            padding: 5px 10px;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        td {
+            padding: 5px 10px;
+            vertical-align: middle;
+        } */
+
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- 조회 버튼을 클릭하면 유저 데이터가 보이도록 하는 이벤트 -->
+    <input type="text" id="searchTxt">
+    <button type="button" onclick="doSearch();">조회</button>
+    <!-- <table id="tb">
+        <thead>
+            <tr>
+                <th onclick="doSort('name');">name</th>
+                <th onclick="doSort('email');">email</th>
+                <th onclick="doSort('company');">company</th>
+                <th onclick="doSort('address');">address</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table> -->
+    <table id="tb">
+        <thead>
+            <tr>
+                <th onclick="doSort('name')">name</th>
+                <th onclick="doSort('email')">email</th>
+                <th onclick="doSort('company')">company</th>
+                <th onclick="doSort('address')">address</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+
+<script src="./user_data.js"></script>
+<script>
+    // console.log(userList);
+
+    var currentData = [];
+    function doSort(key) {
+        currentData.sort(function(a,b){
+            return a[key]>b[key] ? 1 : a[key]<b[key] ? -1 : 0;
+        });
+        displayUsers(currentData);
+    }
+
+
+    function doSearch(){        
+        var searchText = document.getElementById('searchTxt').value;
+
+        if(searchText == null){
+            currentData = userList; // userList의 모든 데이터를 저장
+
+            displayUsers(userList);
+        } else {
+            // /pattern/gi -> i: 대소문자 구분없이, g: global
+            var regExp = new RegExp(searchText, 'i');
+            var data = userList.filter(item => { 
+                if(regExp.test(item.name)){
+                    return true;
+                } else if(regExp.test(item.email)){
+                    return true;
+                } else if(regExp.test(item.company)){
+                    return true;
+                } else if(regExp.test(item.address)){
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        }
+
+        currentData = data; // 조회된 데이터를 저장
+
+        displayUsers(data);
+    }
+    
+
+    function displayUsers(data){
+        // userList 배열을 data로 받아온다.
+        
+        var elem = [];
+
+        // data에서 객체를 각각 뽑아 item으로 정의 후, 실행할 코드 넣기
+        data.forEach(item => {
+            elem.push(`<tr>`);
+            elem.push(`<td>${item.name}</td>`);
+            elem.push(`<td>${item.email}</td>`);
+            elem.push(`<td>${item.company}</td>`);
+            elem.push(`<td>${item.address}</td>`);
+            elem.push(`</tr>`);
+        });
+        document.querySelector('#tb>tbody').innerHTML = elem.join('');
+    }
+
+
+</script>
+</body>
+
+</html>

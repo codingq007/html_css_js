@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // 화살표(Arrow) 연산자
+
+        // function hello(){
+        //     // console.log("Hello World!!");
+        //     return "Hello World";
+        // }
+
+        // var hello = function(){
+        //     console.log("Hello World!!");
+        //     return "Hello World!!";
+        // }
+
+        // var hello = () =>{
+        //     console.log("Hello World!!");
+        //     return "Hello World!!";
+        // };
+
+        // var hello = () =>{          
+        //     return "Hello World!!";
+        // };
+
+        // var hello = () => "Hello World!!";
+        
+        // var a = hello();
+        // console.log(a);
+        //--------------------------
+
+        // 파라미터 한개 인 경우 : ()를 생략
+        var hello = name => "Hello " + name;
+        console.log(hello("kim"));
+
+        // 파라미터가 두개 이상은 경우
+        var hello2 = (name, age) => "Hello "+name+ " 나이 : "+age;
+        console.log(hello2("kim", 30));
+
+    </script>
+</body>
+</html>
