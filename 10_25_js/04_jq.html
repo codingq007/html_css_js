@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>제이쿼리 : 속성값 제어</h2>
+<div>
+    <em title="Italic display">제이쿼리 스터디</em>
+
+    <p id="myid">문단</p>
+    <div id="divid">안녕</div>
+    <button class="btn1">클릭</button>
+    <button class="btn2">reset</button>
+    
+    <script>
+        $(document).ready(function(){
+            let txt0 = $('#myid').text();
+            let txt1 = $('em').text();
+            let txt2 = $('#divid').text();
+
+            $('.btn1').click(function(){
+                let title = $('em').attr('title')
+                // alert(title);
+
+                // 제이쿼리 스터디, 안녕 alert창에 출력하기
+                // alert(txt1);
+                // alert(txt2);
+
+                // 문단 --> 안녕, 안녕 --> Italic display 바꿔서 출력하세요.
+                // text(바꿀값)
+
+                $('#myid').text(txt2);
+                $('#divid').text(title);
+            });
+
+            $('.btn2').click(function(){
+                $('#myid').text(txt0);
+                $('#divid').text(txt2);
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

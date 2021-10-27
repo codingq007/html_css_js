@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .sel { color: tomato;}
+        .highlight{ background: yellowgreen}
+    </style>
+</head>
+<body>
+    <h3>제이쿼리 연습 : 클래스 제어</h3>
+    <div>
+        <em title="Italic display">제이쿼리 스터디</em>
+        <p id="myid">문단</p>
+        <button class="btn">제거</button>
+        <button class="btn2">토글</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('em').addClass('sel');
+            $('#myid').addClass('highlight');
+        });
+
+        $('.btn').click(function(){
+            $('#myid').removeClass('highlight');
+        });
+
+        $('.btn2').click(function(){
+            $('#myid').toggleClass('highlight');
+        });
+    </script>
+</body>
+</html>

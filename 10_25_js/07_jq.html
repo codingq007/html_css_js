@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>제이쿼리 : 클래스 제어</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .frame, .btns {
+            text-align: center;
+        }
+
+        #greeting {
+            background-color: #eee;
+            padding: 20px;
+            color: crimson;
+        }
+
+        #greeting.active{
+            background-color: crimson;
+            color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <h1 id="greeting">Good to see you! I'm Student</h1>
+    </div>
+
+    <div class="btns">
+        <button id="btn1">클래스 추가하기</button>
+        <button id="btn2">클래스 제거하기</button>
+        <button id="btn3">클래스 토글하기</button>
+        <button id="btn4">요소 내에 텍스트 변경하기</button>
+    </div>
+
+    <script>
+        $('#btn1').click(function(){
+            $('#greeting').addClass('active');
+        });
+        $('#btn2').click(function(){
+            $('#greeting').removeClass('active');
+        });
+        $('#btn3').click(function(){
+            $('#greeting').toggleClass('active');
+        });
+        $('#btn4').click(function(){
+            $('#greeting').text('You clicked the toggle button');
+        });
+    </script>
+
+</body>
+</html>

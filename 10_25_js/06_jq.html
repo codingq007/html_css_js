@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .sel{color: tomato}
+    </style>
+</head>
+<body>
+    <h3>제이쿼리 연습 : 탐색 및 스타일 지정</h3>
+    <!-- div>ul>li{리스트항목 $}*6 -->
+    <div>
+        <ul>
+            <li class='top'>리스트항목 1</li>
+            <li class='top'>리스트항목 2</li>
+            <li class='middle'>리스트항목 3</li>
+            <li class='middle'>리스트항목 4</li>
+            <li class='bottom'>리스트항목 5</li>
+            <li class='bottom'>리스트항목 6</li>
+        </ul>
+    </div>
+
+
+<script>
+    $(document).ready(function(){
+        // $('li').eq(2).addClass('sel');
+        // $('li').filter('.middle').addClass('sel');
+
+        // $('li').eq(2).css('background','skyblue');
+        // 복수개의 스타일 지정
+        $('li').eq(2).css({'color':'yellow','background':'skyblue'});
+
+        // 마지막 요소, 첫번째 요소 :first
+        // $('li:last').css('border', '1px solid #f00');
+
+        // 인덱스가 짝수인 것만 적용, :odd
+        $('li:even').css('border', '1px solid #f00');
+    });
+</script>
+</body>
+</html>
