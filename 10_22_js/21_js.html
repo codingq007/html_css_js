@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+    var dt = new Date();
+    console.log(dt);
+
+    // moment.js 라이브러리
+    console.log(moment().format("YYYY-MM-DD"));
+    console.log(moment().format("MMM DD, YYYY"));
+
+    // 10일전
+    console.log(moment().subtract(10, "days").format("YYYY-MM-DD"));
+    console.log(moment().add(10, "days").format("YYYY-MM-DD"));
+    console.log(moment().add(10, "hours").format("YYYY-MM-DD HH"));
+
+    var y = dt.getFullYear();
+    var utc_y = dt.getUTCFullYear();
+    console.log("utc_y :",utc_y);
+    
+    
+    console.log(y);
+    
+    var month = dt.getMonth();
+    var utc_month = dt.getUTCMonth();
+    console.log("utc_month :", utc_month);
+    console.log(month);//1월, 2월, 3월 ~(0,1,2,3~)
+
+    var date = dt.getDate();
+    console.log("date : ", date);
+
+    var day = dt.getDay();
+    console.log("day : ", day); // 일, 월, 화, 수 ~(0, 1, 2,)
+
+    var hour =dt.getHours();
+    var minute =dt.getMinutes();
+    var second =dt.getSeconds();
+
+    // 타임존 : DB저장시에는 표준시로 저장하고 클라이언트에서 표준시를 이용해서 변환
+    console.log("timezone", dt.getTimezoneOffset()); // 분단위로 출력, -540
+
+
+</script>
+</body>
+</html>

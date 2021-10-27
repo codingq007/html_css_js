@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    // 내장 객체 : String
+    var txt = "abcdefghijkl";
+    console.log(txt.length);
+
+    //indexOf()
+    var str = "goodnight say 'hello' 'hello' 'hello' when";
+
+    console.log(str.indexOf("hello")); // 없으면 -1 리턴
+
+
+    if(str.indexOf('sayy') > -1){
+        console.log("문자 발견");
+    }
+
+    // lastIndexOf
+    console.log('lastIndexOf :',str.lastIndexOf('hello'));
+
+    // search
+    console.log('search : ', str.search('hello'));
+
+    // slice
+    var str = "apple, banana, orange";
+    console.log(str.slice(7,13));
+    console.log(str.slice(7));
+    console.log(str.slice(-14,-8));
+
+    // substring() : 7번째부터 13번째 자리까지 잘라냄
+    console.log(str.substring(7,13));
+    
+    // substr() : 7번째 부터 6자리를 잘라오기
+    console.log(str.substr(7, 6));
+
+    // 문자열 각자리의 의미를 알고 있을 때
+    var birthday = "900101";
+    console.log(birthday.substr(0,2));
+
+    // 문자열의 각자리의 의미를 모를 때
+    var date = "2021-10-20";
+    console.log(date.substring(0, date.indexOf('-')));
+
+    // replace()
+    var str = "Please visit here!";
+    var str2 = str.replace('here', 'there');
+    console.log(str2)
+
+    // uppercase
+    console.log(str.toUpperCase());
+
+    // lowercase
+    console.log(str.toLowerCase());
+
+
+    // 문자열 합치기 : concat()
+    var txt1 = "Hello";
+    var txt2 = "World";
+    var txt3 = txt1 + " " + txt2;
+    console.log(txt3);
+
+    var txt4 = txt1.concat(" ", txt2);
+    console.log(txt4);
+
+    // trim
+    var str = "      Hello World         ";
+    console.log(str.length);
+    str = str.trim();
+    console.log(str.length);
+
+    // padding: padStart, padEnd
+    // 상품코드 사용할 경우 : 245334 (6자리 고정)
+    var str = "12";
+    console.log(str.padStart(6,0));
+
+    console.log(str.padEnd(4,0));
+
+    // split
+    var tags = "김, 이, 박";
+    var arr = tags.split(',');
+    console.log(arr);
+
+    var birthday = "1997-10-21";
+    var arr2 = birthday.split("-");
+    console.log(arr2);
+
+    // charAt
+    var str = "Hello World";
+    console.log(str.charAt(1));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</script>
+</body>
+</html>

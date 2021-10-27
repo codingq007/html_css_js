@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Math 객체
+
+        // round()
+        console.log(Math.round(4.9));
+
+        // ceil() : 천정값
+        console.log(Math.ceil(5.2)); //6
+
+        // DB에서 88개의 게시글을 가져왔음
+        // 1페이지당 10개씩 보여주려고 한다.
+
+        // 페이지 계산방법
+        console.log(Math.ceil(88/10));
+
+
+        // floor() : 바닥값
+        console.log(Math.floor(-5.1)); //-6
+
+        //trunc() : 소수점 잘라버림, 정수만 리턴
+        console.log(Math.trunc(9.7));
+        console.log(Math.trunc(-5.7)); //-5
+
+        //sign() : 음수이면 -1, 양수이면 1, 0이면 0리턴
+        console.log(Math.sign(-7));
+        console.log(Math.sign(7));
+        console.log(Math.sign(0));
+
+        //pow() : 제곱
+        console.log(Math.pow(8,2));
+
+        //sqrt() :제곱근
+        console.log(Math.sqrt(64)); // 8
+
+        //abs() : 절대치
+        //max(), min() : 최대,최소
+
+
+        // random() : 0 ~ 1사이의 수
+        var x = Math.random();
+        console.log(x);
+
+        // 1~10 랜덤 정수 얻어오기
+        var i = Math.floor((Math.random()*10)+1);
+        console.log(i);
+    </script>
+</body>
+</html>

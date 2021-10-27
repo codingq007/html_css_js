@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //Number 객체
+        
+        // toFixed() : 지정된 소수점 자리수까지 잘라냄(반올림 표기)
+        var x = 12222.343534;
+        console.log(x.toFixed(3));
+
+        var x = Number("10");
+        console.log(x);
+        var x = Number(true);
+        console.log(x);
+        var x = Number(false);
+        console.log(x);
+
+
+        console.log(Number("Kim")); // Not a Number, NaN
+        console.log(Number("10 33")); //NaN
+
+        //parseInt() : 숫자가 아닌 부분까지 숫자로 인식
+        console.log(parseInt("3"));
+        console.log(parseInt("3.3"));
+        console.log(parseInt("10 33"));
+        console.log(parseInt("day 33")); //NaN
+        console.log(parseInt("10day"));
+
+
+        // parseFloat()
+        console.log(parseFloat("10"));
+        console.log(parseFloat("10.99"));
+        console.log(parseFloat("10.99 aa"));
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
